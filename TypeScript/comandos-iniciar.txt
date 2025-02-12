@@ -1,0 +1,4 @@
+tsc --init
+tsc --watch
+npm init --yes
+npm i --save-dev typescript
