@@ -1,0 +1,63 @@
+<!-- //usar [] = enviar valores
+//usar () = receber eventos e valores -->
+
+<input id="meu-input" [value]="inputText" [type]="inputType" [disabled] = "isDisabled" (keyup)="handleInputKeyup($event)" (input)="handleInputEvent($event)"/>
+
+<br>
+
+<button (click)="enableInput()">Habilitar</button>
+<button (click)="disableInput()">Desabilitar</button>
+
+<br>
+
+<button (click)="setPasswordTypeInput()">Senha</button>
+<button (click)="setTextTypeInput()">Texto</button>
+
+<button (click)="logInputText()">Log</button>
+
+<br><br><br>
+
+<!-- property binding (ver em propriedades no console)-->
+<button [title]="buttonTitle">Teste</button>
+<!-- atributte binding (nome do atributo = ver documentação)-->
+<button [attr.title]="buttonTitle">Teste</button>
+
+<!-- (if) se caso buttonDisable for true retorna true, se for false retorna null (angular remove o atribruto do elemento) -->
+<button [attr.disabled]="buttonDisable ? true : null">Disabled</button>
+
+<button (click)="onButtonClick()">Mudar Props</button>
+
+<br><br><br>
+
+<button style="width: 100px; background-color: aqua">Botão 0</button>
+<br>
+
+<!-- <button [style.width]="widthButton1" [style.backgroundColor]="'blue'"=>Botão 1</button> -->
+
+<!-- <button [style.width.px]="widthButton2" [style.backgroundColor]="'pink'"=>Botão 2</button> -->
+
+<!-- <button [style]="'width: 140px; backgroundColor: brown;'"=>Botão 3</button> -->
+
+<button [style]="{ width: '150px', backgroundColor: 'orange' }">Botão 4</button>
+
+<br>
+
+<button [style]="stylesObj">Botão 5</button>
+
+<br>
+
+<button (click)="updateStyleObj()">Atualizar obj</button>
+
+<button (click)="updateStyleObjCorrect()">Atualizar obj correto</button>
+
+<button (click)="updateWidth()">Atualizar width</button>
+
+<br><br><br>
+
+<button [class.red-button]="isRedButton" (click)="isGreen = false;">Vermelho</button>
+<button [class.green-button]="true" (click)="isGreen = true;">Verde</button>
+
+<button [class]="{
+    'red-button': !isGreen,
+    'green-button': isGreen,
+}">Objeto</button>
