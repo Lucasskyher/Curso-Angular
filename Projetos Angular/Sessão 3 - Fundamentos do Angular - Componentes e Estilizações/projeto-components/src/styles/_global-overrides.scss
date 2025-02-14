@@ -1,0 +1,16 @@
+// Aplicado globalmente para classes ou ids especificos
+// para aplicar o estilo apenas para este card, use no inicio :host
+#cancel-button .card-cancel-button {
+    background-color: plum !important;
+}
+
+// mudança de cor da barra slide em card-roxo mat-slider
+// mat-slider pode-se colocar no seletor para especificar melhor
+.mdc-slider__track--active_fill{
+    border-color: darkmagenta !important;
+}
+
+// mudança de cor da barra toggle em card mat-slide-toggle 
+.mdc-switch:enabled .mdc-switch__track::after{
+    background-color: yellow !important;
+}

@@ -1,0 +1,15 @@
+//path adicionado em angular.json (stylePreprocessorOptions - linha 43)
+@import "variables";
+
+//por estar em primeiro no array de styleurls, teria menor precedencia que o segundo arquivo de scss passado, porém ao adicionar div no começo do seletor, ele possui maior especificação que o do segundo arquivo, por isso o style que é adicionado é o deste arquivo
+div.card-cancel-button {
+    font-size: 16px;
+    text-align: center;
+    margin-top: 10px;
+    border-radius: 25px;
+    background-color: $bgColor;
+    cursor: pointer;
+    padding: 10px;
+    font-weight: bold;
+    color: cornsilk;
+}
